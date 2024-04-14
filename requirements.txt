@@ -1,0 +1,28 @@
+
+python-dotenv==1.0.1
+requests==2.31.0
+
+fastapi==0.110.1
+uvicorn==0.29.0
+
+black==24.4.0
+
+
+# CPU version (for faster installations)
+https://download.pytorch.org/whl/cpu/torch-2.2.2%2Bcpu-cp312-cp312-linux_x86_64.whl ; sys_platform == "linux"
+https://download.pytorch.org/whl/cpu/torch-2.2.2%2Bcpu-cp312-cp312-win_amd64.whl ; sys_platform == "win32"
+
+# GPU version
+# # torch==2.2.2
+
+
+PyMuPDF==1.24.0 # PDF reader
+langchain==0.1.16
+langchain-community==0.0.32
+
+transformers==4.39.3
+tiktoken==0.6.0
+sentence-transformers==2.6.1
+chromadb==0.4.24
+
+gradio==4.26.0
