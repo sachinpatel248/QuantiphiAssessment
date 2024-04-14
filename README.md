@@ -39,8 +39,8 @@ pip install -r requirements.txt
 </table>
 
 Now run 
-1. **`python main.py`** file to start **FastAPI** server. OR
-2. **`python gradio_app.py`** for **Gradio** app
+1. **`python main.py`** file to start **FastAPI** server and check [http://localhost:8181](http://localhost:8181) OR
+2. **`python gradio_app.py`** for **Gradio** app and check [http://localhost:8182](http://localhost:8182)
 
 
 ### 2. Using docker on WINDOWS
@@ -58,3 +58,9 @@ CMD  uvicorn main:app --host ${HOST} --port ${PORT}
 # EXPOSE ${GRADIOPORT}
 # CMD python gradio_app.py
 ```
+
+
+## Note
+1. Have not created complete parameterised app. Can change all required settings from **`env_var_files/.env.local`**
+2. Hugging Face embedding model **`all-mpnet-base-v2`**
+3. Hugging Face LLM model for QnA **`google/gemma-1.1-2b-it`**
