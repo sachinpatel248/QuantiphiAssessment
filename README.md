@@ -39,8 +39,8 @@ pip install -r requirements.txt
 </table>
 
 Now run 
-1. **`python main.py`** file to start **FastAPI** server and check [http://localhost:8181](http://localhost:8181) OR
-2. **`python gradio_app.py`** for **Gradio** app and check [http://localhost:8182](http://localhost:8182)
+1. **`python main.py`** file to start **FastAPI** server and check [http://127.0.0.1:8181](http://127.0.0.1:8181) OR
+2. **`python gradio_app.py`** for **Gradio** app and check [http://127.0.0.1:8181](http://127.0.0.1:8182)
 
 
 ### 2. Using docker on WINDOWS
