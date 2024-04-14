@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "3db80581-06b7-4119-9bfb-eca55df8acbf",
+		"name": "QA_RAG",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15279582"
+	},
+	"item": [
+		{
+			"name": "Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "38cf369a-2a57-4960-a142-b99b10c75bbd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"How many American men were diagnosed with syphilis and which year\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8181/question",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8181",
+					"path": [
+						"question"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
