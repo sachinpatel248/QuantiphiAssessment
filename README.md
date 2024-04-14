@@ -64,3 +64,4 @@ CMD  uvicorn main:app --host ${HOST} --port ${PORT}
 1. Have not created complete parameterised app. Can change all required settings from **`env_var_files/.env.local`**
 2. Hugging Face embedding model **`all-mpnet-base-v2`**
 3. Hugging Face LLM model for QnA **`google/gemma-1.1-2b-it`**
+4. Check postman collection to make request
