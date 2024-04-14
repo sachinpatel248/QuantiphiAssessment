@@ -31,7 +31,6 @@ def download_file(url: str, file_name: str) -> str:
 
 
 class Validators:
-
     @classmethod
     def validate_file_path(cls, file_path: str):
         if not isinstance(file_path, str):
@@ -44,7 +43,6 @@ class Validators:
     def validate_page_idxs(
         cls, page_start_idx: int, page_end_idx: int, total_page_count: int
     ):
-
         if not isinstance(page_start_idx, int):
             raise ValueError("page_start_idx not int type")
         if not isinstance(page_end_idx, int):

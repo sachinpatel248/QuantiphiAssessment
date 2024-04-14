@@ -10,7 +10,6 @@ def get_vector_retriver(
     embedder: HuggingFaceEmbeddings,
     collection_name: str = "bio_vector_db",
 ):
-
     vector_store = Chroma.from_documents(
         documents=documents, embedding=embedder, collection_name=collection_name
     )

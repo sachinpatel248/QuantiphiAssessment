@@ -9,7 +9,6 @@ from src.qa_rag.request_models import QaLLMRequest
 
 
 def get_qa_llm_pipe(lllm_qa_request: QaLLMRequest) -> HuggingFacePipeline:
-
     hf_qa_pipe = None
     llm_qa_model_id = lllm_qa_request.hf_model_id
     max_new_tokens = lllm_qa_request.max_new_tokens
