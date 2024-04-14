@@ -19,9 +19,13 @@ def create_file_path(file_name: str) -> str:
 
 def download_file(url: str, file_name: str) -> str:
     file_path = create_file_path(file_name)
-    response = requests.get(url)
-    with open(file_path, "wb") as file:
-        file.write(response.content)
+    if not os.path.exists(file_path):
+        print("Downloading file from url")
+        response = requests.get(url)
+        with open(file_path, "wb") as file:
+            file.write(response.content)
+
+        print(f"Downloaded file at {file_path}")
 
     return file_path
 
@@ -55,3 +59,9 @@ class Validators:
             raise ValueError(
                 "Page end index must be between page start index and total page count."
             )
+
+
+pdf_url = "https://assets.openstax.org/oscms-prodcms/media/documents/ConceptsofBiology-WEB.pdf"
+pdf_file_name = "ConceptsofBiology-WEB.pdf"
+
+pdf_file_path = download_file(pdf_url, pdf_file_name)

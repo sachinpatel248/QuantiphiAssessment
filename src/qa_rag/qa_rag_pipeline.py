@@ -1,5 +1,8 @@
 from langchain.chains import RetrievalQA
 
+
+from src.qa_rag.utils import pdf_file_path
+
 from src.qa_rag.request_models import *
 
 from src.qa_rag.doc_loader import pdf_to_langchain_docs
@@ -32,9 +35,8 @@ def create_qa_rag_pipeline(qa_request: QaRagPipelineRequest):
 
 
 def load_default_pipe():
-    pdf_path = "static/ConceptsofBiology-WEB.pdf"
     qa_rag_request = QaRagPipelineRequest(
-        pdf=PDFRequest(file_path=pdf_path, page_start_idx=18, page_end_idx=68),
+        pdf=PDFRequest(file_path=pdf_file_path, page_start_idx=18, page_end_idx=68),
         chunking=ChunkingRequest(),
         hf_embedder=EmbeddingRequest(),
         vector_retriver=VectorRetriverRequest(),
