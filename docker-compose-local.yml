@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+
+  qa_rag_service:
+    image: qa_rag_image
+    # you cannot scale a service beyond 1 container if you have specified a custom name.
+    container_name: qa_rag_container
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        - ENVIRONMENT=local
+        - PORT=${PORT}
+        - HOST=${HOST}
+        - GRADIOPORT=${GRADIOPORT}
+    env_file:
+      - ./env_var_files/.env.local
+    # Attaching volume so that our models dir can be re-used
+    # And just requires restart (not docker build) for any code changes
+    volumes:
+      - .:/app
+    ports:
+      - ${PORT}:${PORT}
+    restart: unless-stopped
