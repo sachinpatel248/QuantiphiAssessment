@@ -59,7 +59,9 @@ class Validators:
             )
 
 
-pdf_url = "https://assets.openstax.org/oscms-prodcms/media/documents/ConceptsofBiology-WEB.pdf"
+# Downloading file by default if not exists in static dir
+
 pdf_file_name = "ConceptsofBiology-WEB.pdf"
+pdf_url = "https://assets.openstax.org/oscms-prodcms/media/documents/ConceptsofBiology-WEB.pdf"
 
 pdf_file_path = download_file(pdf_url, pdf_file_name)

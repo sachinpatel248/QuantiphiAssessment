@@ -12,7 +12,7 @@ router = APIRouter()
 @router.post("/question", response_model=QaRagQueryRequest)
 def question(
     request: QaRagQueryRequest,
-    # _: bool = Depends(validate_user_using_api_key)
+    # is_user_authenticated: bool = Depends(validate_user_using_api_key)
 ):
     # Un comment above line to enable auth via api-key
     request.answer = extract_answer(qa_rag_pipe, request.question)

@@ -10,6 +10,8 @@ def get_vector_retriver(
     embedder: HuggingFaceEmbeddings,
     collection_name: str = "bio_vector_db",
 ):
+    """Embeds & store the chunked langchain documents with given vector db collection name"""
+
     vector_store = Chroma.from_documents(
         documents=documents, embedding=embedder, collection_name=collection_name
     )

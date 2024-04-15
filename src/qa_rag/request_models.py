@@ -1,3 +1,6 @@
+"""Pydantic request class to be used while maing api request.
+Reused in place of parameters for all internal function call of QA Pipeline"""
+
 from uuid import uuid4
 from pydantic import BaseModel
 

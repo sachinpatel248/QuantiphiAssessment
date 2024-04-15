@@ -13,6 +13,8 @@ from src.qa_rag.retirver_vector_db import get_vector_retriver
 
 
 def create_qa_rag_pipeline(qa_request: QaRagPipelineRequest):
+    """Combining all pipeline components"""
+
     documents = pdf_to_langchain_docs(qa_request.pdf)
     splitted_documents = split_documents(documents, qa_request.chunking)
     hf_embedder = get_hf_embedder(qa_request.hf_embedder.hf_model_id)
@@ -49,6 +51,8 @@ def load_default_pipe():
 
 
 def extract_answer(qa_pipe, question: str) -> QaRagQueryRequest:
+    """Extracts an answer to a given question using a Question-Answering pipeline."""
+
     response = qa_pipe.invoke(question)
     answer = response["result"].strip()
 
