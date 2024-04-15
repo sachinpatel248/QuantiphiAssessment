@@ -61,7 +61,7 @@ CMD  uvicorn main:app --host ${HOST} --port ${PORT}
 
 
 ## Note
-1. Have not created complete parameterised app. Can change all required settings from **`env_var_files/.env.local`**
+1. Have not finished building the fully parameterised app for creating pipelines due to insufficient system RAM. You can adjust all necessary settings in **`env_var_files/.env.local`** to run app as desired. Going forward we can predfined the embedding & llm models, enabling us to utilise different input files to create a new vector database collection for conducting Q&A.
 2. Hugging Face embedding model **`all-mpnet-base-v2`**
 3. Hugging Face LLM model for QnA **`google/gemma-1.1-2b-it`**
 4. Check postman collection to make request
